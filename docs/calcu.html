@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled MDAS Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Verdana;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+            background: url('/ribbon.jpeg');
+            color: #cb96f2;
+        }
+        #calculator {
+            background-color: rgba(255, 219, 251, 0.8);
+            border-radius: 16px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            transition: background-color 0.3s;
+        }
+        input[type="number"] {
+            grid-column: span 4;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+            font-family: Georgia;
+        }
+        input[type="number"]:focus {
+            border-color: #9d76f2;
+        }
+        button {
+            background-color: #d274f1;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #010e16;
+            transform: scale(1.05);
+        }
+        #result-container {
+            background-color: rgba(90, 20, 125, 0.9);
+            border: 2px solid #dd97e4;
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 15px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 1.3em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .font-buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="number" id="num1" placeholder="First number">
+        <input type="number" id="num2" placeholder="Second number">
+        <button onclick="calculate('add')">+</button>
+        <button onclick="calculate('subtract')">−</button>
+        <button onclick="calculate('multiply')">×</button>
+        <button onclick="calculate('divide')">÷</button>
+        <button style="grid-column: span 4; background-color: #e77eee;" onclick="calculate('equal')">=</button>
+    </div>
+    <div id="result-container">Result will be displayed here</div>
+
+    <div class="font-buttons">
+        <button onclick="changeFontSize(1)">Increase Font Size</button>
+        <button onclick="changeFontSize(-1)">Decrease Font Size</button>
+    </div>
+
+    <script>
+        let currentResult = null;
+        let lastOperation = null;
+
+        function calculate(operation) {
+            let num1 = currentResult !== null ? currentResult : parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result-container').textContent = 'Please enter valid numbers';
+                return;
+            }
+
+            let result;
+            switch (operation) {
+                case 'add':
+                    lastOperation = (a, b) => a + b;
+                    break;
+                case 'subtract':
+                    lastOperation = (a, b) => a - b;
+                    break;
+                case 'multiply':
+                    lastOperation = (a, b) => a * b;
+                    break;
+                case 'divide':
+                    if (num2 !== 0) {
+                        lastOperation = (a, b) => a / b;
+                    } else {
+                        document.getElementById('result-container').textContent = 'Cannot divide by zero';
+                        return;
+                    }
+                    break;
+                case 'equal':
+                    if (lastOperation) {
+                        result = lastOperation(num1, num2);
+                        currentResult = result;
+                        document.getElementById('result-container').textContent = 'Result: ' + result;
+                        document.getElementById('num1').value = result; // Update num1 with the result
+                        document.getElementById('num2').value = ''; // Clear num2 for next input
+                    } else {
+                        document.getElementById('result-container').textContent = 'Select an operation first';
+                    }
+                    return;
+            }
+
+            if (lastOperation) {
+                result = lastOperation(num1, num2);
+                currentResult = result;
+                document.getElementById('result-container').textContent = 'Result: ' + result;
+                document.getElementById('num1').value = result; // Update num1 with the result
+                document.getElementById('num2').value = ''; // Clear num2 for next input
+            }
+        }
+
+        function changeFontSize(value) {
+            const container = document.getElementById('result-container');
+            const currentSize = parseFloat(window.getComputedStyle(container).fontSize);
+            container.style.fontSize = (currentSize + value) + 'px';
+        }
+    </script>
+</body>
+</html>
