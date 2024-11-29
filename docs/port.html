@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="port.html">Home</a></li> 
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p> I am Gerrelle Jarina, currently studying at City Of Malabon University as a 
+          BSIT 3rd year students. </p>
+
+          
+          <p>
+            I am most likely an introvert type of a person, I prefer
+            to be alone most of the time and use my creativity to enjoy my 
+            time. I like spending my playing, doing arts and scrolling through
+            my socials. 
+         </p>
+    </section>
+
+    <section id="projects">
+        <h2>My Achievements</h2>
+        <div class="project">
+            <h3> JPCS-CMU 2023-2024</h3>
+            <p> Recreational Committee</p>
+            <p> E-Sport Committee</p>
+            <p> Photobooth Committee</p>
+        </div>
+        <div class="project">
+            <h3>JPCS-CMU 2024-2025</h3>
+            <p>Executive Secretary</p>
+        </div>
+        <div class="project">
+            <h3>Academic Execellence</h3>
+            <p> 2023-2024 Dean's Lister</p>
+        </div>
+    </section>
+
+    <section id="contact">
+       
+      <h2>Contact</h2>
+      <div class="project">
+
+            <div class="separator"></div>
+    
+            <ul class="contacts-list">
+    
+              <li class="contact-item">
+    
+                <div class="icon-box">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+    
+                <div class="contact-info">
+                  <p class="contact-title">Email</p>
+    
+                  <a href="enciojay11@gmail.com" class="contact-link">enciojay11@gmail.com</a>
+                </div>
+    
+              </li>
+    
+              <li class="contact-item">
+    
+                <div class="icon-box">
+                  <ion-icon name="phone-portrait-outline"></ion-icon>
+                </div>
+    
+                <div class="contact-info">
+                  <p class="contact-title">Phone</p>
+    
+                  <a href="tel:+12133522795" class="contact-link">+92 3008355143</a>
+                </div>
+    
+              </li>
+    
+              <li class="contact-item">
+    
+                <div class="icon-box">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </div>
+    
+                <div class="contact-info">
+                  <p class="contact-title">Birthday</p>
+    
+                  <time datetime="2004-06-18">June 18, 2004</time>
+                </div>
+    
+              </li>
+    
+              <li class="contact-item">
+    
+                <div class="icon-box">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+    
+                <div class="contact-info">
+                  <p class="contact-title">Location</p>
+    
+                  <address>NAVOTAS CITY</address>
+                </div>
+    
+              </li>
+    
+            </ul>
+    
+            <div class="separator"></div>
+    
+            <ul class="social-list">
+    
+             
+    
+              <li class="social-item">
+                <a href="https://www.instagram.com/_gerrelle/profilecard/?igsh=enZmNHF3M2tmb3pn" target="_blank" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+    
+            </ul>
+    
+          </div>
+    
+        </aside>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1212;
+}
+
+header {
+    background: #8ca6b52e;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+nav {
+    background-color: #725b5b; 
+    padding: 10px;
+}
+
+/* Styling the list items */
+nav ul {
+    list-style: none; /* Removes bullet points from list */
+    display: flex; /* Horizontally aligns list items */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Styling individual list items */
+nav ul li {
+    margin-right: 20px; /* Adds spacing between links */
+}
+
+/* Styling the links */
+nav ul li a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+}
+
+/* Hover effects for the links */
+nav ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    color: #ffcc00; /* Changes color on hover */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: #fef6f67f;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+}
+
+.project {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #000000;
+    color: #f2f2f2;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.sidebar {
+    margin-bottom: 15px;
+    max-height: 112px;
+    overflow: hidden;
+    transition: var(--transition-2);
+  }
+  
+  .sidebar.active { max-height: 405px; }
+  
+  .sidebar-info {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .avatar-box {
+    background: var(--bittersweet-shimmer);
+    border-radius: 20px;
+  }
+  
+  .info-content .name {
+    color: var(--white-2);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-500);
+    letter-spacing: -0.25px;
+    margin-bottom: 10px;
+  }
+  
+  .info-content .title {
+    color: var(--white-1);
+    background: var(--border-gradient-onyx);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-300);
+    width: max-content;
+    padding: 3px 12px;
+    border-radius: 8px;
+  }
+  
+  .info_more-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 0 15px;
+    font-size: 13px;
+    color: var(--orange-yellow-crayola);
+    background: var(--bg-gradient-yellow-1);
+    padding: 10px;
+    box-shadow: var(--shadow-2);
+    transition: var(--transition-1);
+    z-index: 1;
+  }
+  
+  .info_more-btn::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--bg-gradient-jet);
+    transition: var(--transition-1);
+    z-index: -1;
+  }
+  
+  .info_more-btn:hover,
+  .info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+  
+  .info_more-btn:hover::before,
+  .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+  
+  .info_more-btn span { display: none; }
+  
+  .sidebar-info_more {
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-2);
+  }
+  
+  .sidebar.active .sidebar-info_more {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .contacts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .contact-item {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .contact-info {
+    max-width: calc(100% - 46px);
+    width: calc(100% - 46px);
+  }
+  
+  .contact-title {
+    color: var(--light-gray-70);
+    font-size: var(--fs-8);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  
+  .contact-info :is(.contact-link, time, address) {
+    color: var(--white-2);
+    font-size: var(--fs-7);
+  }
+  
+  .contact-info address { font-style: normal; }
+  
+  .social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+  }
+  
+  .social-item .social-link {
+    color: var(--light-gray-70);
+    font-size: 18px;
+  }
+  
+  
+  .social-item .social-link:hover { color: var(--light-gray); }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #NAVBAR
+  \*-----------------------------------*/
+  
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(240, 78%, 38%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-2);
+    z-index: 5;
+  }
+  
+  .navbar-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .navbar-link {
+    color: var(--light-gray);
+    font-size: var(--fs-8);
+    padding: 20px 7px;
+    transition: color var(--transition-1);
+  }
+  
+  .navbar-link:hover,
+  .navbar-link:focus { color: var(--light-gray-70); }
+  
+  .navbar-link.active { color: var(--orange-yellow-crayola); }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #ABOUT
+  \*-----------------------------------*/
+  
+  .about .article-title { margin-bottom: 15px; }
+  
+  .about-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+  }
+  
+  .about-text p { margin-bottom: 15px; }
+  
+  
+  
+  /**
+   * #service 
+   */
+  
+  .service { margin-bottom: 35px; }
+  
+  .service-title { margin-bottom: 20px; }
+  
+  .service-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-item {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+  }
+  
+  .service-item::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  .service-icon-box { margin-bottom: 10px; }
+  
+  .service-icon-box img { margin: auto; }
+  
+  .service-content-box { text-align: center; }
+  
+  .service-item-title { margin-bottom: 7px; }
+  
+  .service-item-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+  }
+  
+</style>
