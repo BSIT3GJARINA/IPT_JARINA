@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPT PORTFOLIO</title>
+
+
+  <nav class="sidebar">
+    <ul>
+        <li><a href="port.html">Home</a></li> 
+        <li><a href="aboutme.html">About Me</a></li> 
+        
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<hr class="navbar-separator">
+
+
+  
+<div class="content-card">
+  <ul class="contacts-list">
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="mail-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">Email</p>
+        <a href="mailto:enciojay11@gmail.com" class="contact-link">enciojay11@gmail.com</a>
+      </div>
+    </li>
+
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="call-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">Phone</p>
+        <p class="contact-link">+92 3008355143</p>
+      </div>
+    </li>
+
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">Birthday</p>
+        <p class="contact-link">June 18, 2004</p>
+      </div>
+    </li>
+
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="location-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">Location</p>
+        <p class="contact-link">NAVOTAS CITY</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+</aside>
+
+<style>
+     
+  
+     nav {
+    background-color: #6a4848; 
+    padding: 10px;
+}
+
+/* Styling the list items */
+nav ul {
+    list-style: none; /* Removes bullet points from list */
+    display: flex; /* Horizontally aligns list items */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Styling individual list items */
+nav ul li {
+    margin-right: 20px; /* Adds spacing between links */
+}
+
+/* Styling the links */
+nav ul li a {
+    color: rgb(239, 239, 239); /* Text color for links */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+}
+
+/* Hover effects for the links */
+nav ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    color: #ffcc00; /* Changes color on hover */
+}
+
+
+  a { text-decoration: none; }
+  
+  li { list-style: none; }
+  
+  img, ion-icon, a, button, time, span { display: block; }
+  
+  
+  
+  
+  
+  ::selection {
+    background: var(--orange-yellow-crayola);
+    color: var(--smoky-black);
+  }
+  
+  :focus { outline-color: var(--orange-yellow-crayola); }
+  
+  html { font-family: var(--ff-poppins); }
+  
+  body { background: var(--smoky-black); }
+  
+  
+  
+  
+  .custom-separator {
+  width: 100%;
+  height: 3px; /* Adjust the thickness of the separator */
+  background-color: var(--eerie-black-3); /* Adjust the color to match your theme */
+  margin: 20px 0; /* Adjust the space between the navbar and content card */
+}
+
+  
+  
+  
+ 
+  /*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+  
+  .content-card {
+  position: relative;
+  background: var(--bg-gradient-onyx); /* Background color of the card */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 14px; /* Rounded corners */
+  box-shadow: var(--shadow-2); /* Box shadow for depth effect */
+  margin-bottom: 30px; /* Adds space between other sections */
+  text-align: center; /* Centers content */
+}
+
+ul.contacts-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-box {
+  margin-right: 10px;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-title {
+  font-weight: bold;
+  color: white;
+}
+
+.contact-link {
+  color: white;
+}
+
+  .sidebar,
+  article {
+    background: var(--bg-gradient-onyx);
+    border: 1px solid var(--jet);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+  }
+  
+  
+  .icon-box {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--ionicon-stroke-width);
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+  }
+  
+  .icon-box::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--eerie-black-1);
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  .icon-box ion-icon { --ionicon-stroke-width: 35px; }
+  
+  article { display: none; }
+  
+  article.active {
+    display: block;
+    animation: fade 0.5s ease backwards;
+  }
+ /* Contact Section Styling */
+.sidebar-info_more {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--eerie-black-1);
+    border-radius: 14px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    background: var(--eerie-black-1);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-2);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+  
+ 
+  
+  
+  
+  @keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .h2,
+  .h3,
+  .h4,
+  .h5 {
+    color: var(--white-2);
+    text-transform: capitalize;
+  }
+  
+  .h2 { font-size: var(--fs-1); }
+  
+  .h3 { font-size: var(--fs-2); }
+  
+  .h4 { font-size: var(--fs-4); }
+  
+  .h5 {
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+  }
+  
+  .article-title {
+    position: relative;
+    padding-bottom: 7px;
+  }
+  
+  .article-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--text-gradient-yellow);
+    border-radius: 3px;
+  }
+  
+  
+  
+  
+  
+  .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
+  .contact-container
+  
+  
+
+
+/* Before element for background effects */
+.content-card:before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+
+
+/* Style the individual contact items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Style for the icons */
+.icon-box {
+    width: 30px;
+    height: 30px;
+    background: var(--border-gradient-onyx);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+/* Adjust the contact info text */
+.contact-info {
+    color: white;
+}
+
+/* Style the links inside contact-info */
+.contact-info a {
+    color: white; /* Change to match your theme */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Add hover effect to links */
+.contact-info a:hover {
+    color: #ffcc00; /* Change to a hover color */
+}
+
+/* Separator for the sections */
+.separator {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* Social media icon list */
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-item a {
+    font-size: 24px;
+    color: white;
+    margin-right: 10px;
+}
+
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #MAIN
+  \*-----------------------------------*/
+  
+
+  
+
+:root {
+
+    /**
+     * colors
+     */
+  
+    /* gradient */
+  
+    --bg-gradient-onyx: linear-gradient(
+      to bottom right, 
+      hsl(240, 1%, 25%) 3%, 
+      hsl(0, 0%, 19%) 97%
+    );
+    --bg-gradient-jet: linear-gradient(
+      to bottom right, 
+      hsla(240, 1%, 18%, 0.251) 0%, 
+      hsla(240, 2%, 11%, 0) 100%
+    ), hsl(240, 2%, 13%);
+    --bg-gradient-yellow-1: linear-gradient(
+      to bottom right, 
+      hsl(45, 100%, 71%) 0%, 
+      hsla(36, 100%, 69%, 0) 50%
+    );
+    --bg-gradient-yellow-2: linear-gradient(
+      135deg, 
+      hsla(45, 100%, 71%, 0.251) 0%, 
+      hsla(35, 100%, 68%, 0) 59.86%
+    ), hsl(240, 2%, 13%);
+    --border-gradient-onyx: linear-gradient(
+      to bottom right, 
+      hsl(0, 0%, 25%) 0%, 
+      hsla(0, 0%, 25%, 0) 50%
+    );
+    --text-gradient-yellow: linear-gradient(
+      to right, 
+      hsl(45, 100%, 72%), 
+      hsl(35, 100%, 68%)
+    );
+  
+    /* solid */
+  
+    --jet: hsl(0, 0%, 22%);
+    --onyx: hsl(240, 1%, 17%);
+    --eerie-black-1: hsl(240, 2%, 13%);
+    --eerie-black-2: hsl(240, 2%, 12%);
+    --smoky-black: hsl(0, 0%, 7%);
+    --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 98%);
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --vegas-gold: hsl(45, 54%, 58%);
+    --light-gray: hsl(0, 0%, 84%);
+    --light-gray-70: hsla(0, 0%, 84%, 0.7);
+    --bittersweet-shimmer: hsl(0, 43%, 51%);
+  
+    /**
+     * typography
+     */
+  
+    /* font-family */
+    --ff-poppins: 'Poppins', sans-serif;
+  
+    /* font-size */
+    --fs-1: 24px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 16px;
+    --fs-5: 15px;
+    --fs-6: 14px;
+    --fs-7: 13px;
+    --fs-8: 11px;
+  
+    
+}
+
+  
+  
+  
+</style>
